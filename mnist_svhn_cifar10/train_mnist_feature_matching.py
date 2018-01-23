@@ -126,7 +126,7 @@ for epoch in range(300):
     # construct randomly permuted minibatches
     trainx = []
     trainy = []
-    for t in range(trainx_unl.shape[0]/txs.shape[0]):
+    for t in range(int(trainx_unl.shape[0]/txs.shape[0])):
         inds = rng.permutation(txs.shape[0])
         trainx.append(txs[inds])
         trainy.append(tys[inds])
